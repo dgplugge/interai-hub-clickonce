@@ -343,6 +343,13 @@ $config = [ordered]@{
         globalCapTokens = 0
         perAgentCapTokens = [ordered]@{}
     }
+    ui = [ordered]@{
+        # Background color for the main Hub window. Any name from
+        # System.Drawing.KnownColor works — try "AliceBlue" (default),
+        # "GhostWhite", "Lavender", "Honeydew", "WhiteSmoke". Edit and
+        # restart the Hub to apply.
+        backColor = "AliceBlue"
+    }
     agents = $collectedAgents
 }
 

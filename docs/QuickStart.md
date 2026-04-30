@@ -95,5 +95,6 @@ Each agent answers based on its system prompt and provider. Watch the transcript
 - **Register a license** if you've purchased one. Click **Register…** in the controls panel and paste the key. Otherwise the trial runs for 30 days.
 - **Pick a project.** The **Project** dropdown at the bottom of the controls panel scopes the conversation context. Switching projects clears the transcript but preserves your in-progress message.
 - **Report a bug.** Click **Report a Bug…** — it opens a pre-filled GitHub issue with your version, OS, and log location. Add what you were doing and submit.
+- **Tune the window color.** Open `%APPDATA%\AgentHub\agent-hub-config.json` and look for the `ui.backColor` field. Default is `"AliceBlue"`. Replace with any name from `System.Drawing.KnownColor` — `"GhostWhite"`, `"Lavender"`, `"Honeydew"`, `"WhiteSmoke"` are gentle alternatives — and restart the Hub. Unrecognized names log a warning and leave the default in place.
 
 For detailed reference on what each control does and the AICP message format, see the [InterAI Hub source repo](https://github.com/dgplugge/interai-hub) (private; ask the maintainer if you need access).
