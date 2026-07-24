@@ -14,8 +14,8 @@ You don't need any programming experience. You do need a working Windows machine
 
 ## 1. Install the Hub
 
-1. Go to the releases page: <https://github.com/dgplugge/interai-hub-clickonce>
-2. Download **`setup.exe`** (it's at the top of the file list).
+1. Go to the releases page: <https://github.com/dgplugge/interai-hub-clickonce/releases>
+2. Open the latest beta release and download **`setup.exe`**.
 3. Double-click `setup.exe` to run it.
 4. Windows may show a "Windows protected your PC" warning — click **More info**, then **Run anyway**. (This is normal for software not yet seen by Microsoft's filter.)
 5. The installer runs and adds **InterAI Hub** to your Start menu.

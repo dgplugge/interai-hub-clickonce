@@ -109,4 +109,4 @@ If you suspect a key has leaked, **revoke it** at the provider's dashboard immed
 
 The Hub's **Settings** dialog (button in the controls panel) lets you add, remove, or edit any agent at any time without re-running the setup script. So if you start with one provider and want to add another later, that's the easier path than re-running the script.
 
-The four providers above are the ones with built-in adapters. Other providers from the broader LLM landscape (Cohere, xAI Grok, Perplexity, Llama-via-Together, DeepSeek, Qwen, etc.) would require new adapters in the Hub source. If there's a specific provider you'd like supported, file a feature request via the **Report a Bug** button (it works for feature requests too).
+The providers above are common starter choices. The Hub may include additional adapters and registry entries over time. If there is a specific provider or model you would like supported, file a feature request via the **Report a Bug** button. It works for feature requests too.

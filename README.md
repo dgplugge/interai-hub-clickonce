@@ -7,10 +7,12 @@ take turns responding, with their full conversation history maintained
 across rounds.
 
 > **First time here?** Read the **[Quick Start guide](docs/QuickStart.md)** — a 15-minute walkthrough from zero to your first multi-agent conversation.
+>
+> **Testing the beta?** Use the **[Beta Tester Checklist](docs/BetaTesterChecklist.md)** so feedback is consistent.
 
 ## Install
 
-1. Download **`setup.exe`** from this repo (or the [Releases](https://github.com/dgplugge/interai-hub-clickonce/releases) tab when one is published).
+1. Download **`setup.exe`** from the [latest beta release](https://github.com/dgplugge/interai-hub-clickonce/releases).
 2. Run it. ClickOnce installs the Hub to your user profile and adds a Start menu entry.
 3. Launch **InterAI Hub** from the Start menu.
 
@@ -55,3 +57,4 @@ This is the **public ClickOnce deployment** repo — installer plus manifest plu
 - `Setup-InterAI-Hub.ps1` — interactive PowerShell script that collects API keys and writes the Hub's config.
 - `docs/QuickStart.md` — 15-minute walkthrough from zero to first prompt.
 - `docs/ApiKeys.md` — provider-by-provider signup steps for common starter providers.
+- `docs/BetaTesterChecklist.md` — focused smoke test checklist for beta testers.
