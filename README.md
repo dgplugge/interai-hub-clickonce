@@ -12,13 +12,15 @@ across rounds.
 
 1. Download **`setup.exe`** from this repo (or the [Releases](https://github.com/dgplugge/interai-hub-clickonce/releases) tab when one is published).
 2. Run it. ClickOnce installs the Hub to your user profile and adds a Start menu entry.
-3. **Don't launch yet** — first run the setup script (next section) so the Hub has API keys to talk to providers.
+3. Launch **InterAI Hub** from the Start menu.
 
 Requires **.NET Framework 4.8** (Windows 10 and 11 ship with it; the installer prompts otherwise).
 
 ## Connect to AI providers
 
-Before launching the Hub, run the setup script. It walks you through getting an API key from each of four providers (Anthropic, OpenAI, Google, Mistral) and writes a working config to `%APPDATA%\AgentHub\agent-hub-config.json`. You can skip any provider; even one is enough.
+On first launch, use **Settings...** to add or edit agents, paste provider API keys, test connections, and open the local config folder. You can also use **Model Registry...** to browse supported model entries and provider links.
+
+If you prefer guided PowerShell setup, run the setup script. It walks you through getting API keys for the starter providers and writes a working config to `%APPDATA%\AgentHub\agent-hub-config.json`. You can skip any provider; even one is enough.
 
 Open PowerShell and run:
 
@@ -29,7 +31,7 @@ powershell -ExecutionPolicy Bypass -File $env:TEMP\Setup-InterAI-Hub.ps1
 
 Detailed signup steps for each provider — what to click, what to copy, free-tier guidance — are in **[docs/ApiKeys.md](docs/ApiKeys.md)**.
 
-When the script finishes, launch **InterAI Hub** from the Start menu. The first launch asks you to pick a Journal folder (any folder works), then you're ready to dispatch your first round.
+When the script finishes, launch **InterAI Hub** from the Start menu. The first launch asks you to pick a Journal folder (any folder works), then you're ready to send your first prompt.
 
 ## Trial and licensing
 
@@ -51,5 +53,5 @@ This is the **public ClickOnce deployment** repo — installer plus manifest plu
 - `AAAAgentHub.application` — the ClickOnce manifest.
 - `Application Files/AAAAgentHub_<version>/` — the actual binaries for that version.
 - `Setup-InterAI-Hub.ps1` — interactive PowerShell script that collects API keys and writes the Hub's config.
-- `docs/QuickStart.md` — 15-minute walkthrough from zero to first dispatch.
-- `docs/ApiKeys.md` — provider-by-provider signup steps for Anthropic, OpenAI, Google, and Mistral.
+- `docs/QuickStart.md` — 15-minute walkthrough from zero to first prompt.
+- `docs/ApiKeys.md` — provider-by-provider signup steps for common starter providers.

@@ -1,0 +1,87 @@
+{
+  "budgetGates": {
+    "enabled": true,
+    "windowDays": 1,
+    "globalCapTokens": 0,
+    "perAgentCapTokens": {
+      "Pharos": 100000,
+      "Forge": 75000,
+      "Lodestar": 50000,
+      "SpinDrift": 40000,
+      "Lumen": 40000,
+      "Trident": 30000
+    }
+  },
+  "kernels": {
+    "InterAI-Protocol": "mvp-build",
+    "ACAL-Dev": "acal-dev"
+  },
+  "agents": [
+    {
+      "name": "Pharos",
+      "provider": "anthropic",
+      "apiEndpoint": "https://api.anthropic.com/v1/messages",
+      "apiKey": "",
+      "model": "claude-opus-4-6",
+      "systemPrompt": "You are Pharos. You are ONE agent in a multi-agent round table. Other agents are SEPARATE AI instances running on DIFFERENT platforms. You CANNOT speak for them. You MUST only respond as yourself. You are the Lead Coder and AI Architect. Respond concisely and focus on implementation, architecture, and code.",
+      "maxTokens": 2048,
+      "timeoutMs": 30000,
+      "enabled": true
+    },
+    {
+      "name": "Lodestar",
+      "provider": "openai",
+      "apiEndpoint": "https://api.openai.com/v1/chat/completions",
+      "apiKey": "",
+      "model": "gpt-4o",
+      "systemPrompt": "You are Lodestar. You are ONE agent in a multi-agent round table. Other agents are SEPARATE AI instances running on DIFFERENT platforms. You CANNOT speak for them. You MUST only respond as yourself. You are the Systems Architect and Design Advisor. Focus on architectural soundness, safety rails, and design philosophy.",
+      "maxTokens": 2048,
+      "timeoutMs": 30000,
+      "enabled": true
+    },
+    {
+      "name": "SpinDrift",
+      "provider": "openai",
+      "apiEndpoint": "https://api.openai.com/v1/chat/completions",
+      "apiKey": "",
+      "model": "gpt-4o",
+      "systemPrompt": "You are SpinDrift. You are ONE agent in a multi-agent round table. Other agents are SEPARATE AI instances running on DIFFERENT platforms. You CANNOT speak for them. You MUST only respond as yourself. You are the Reviewer/Integrator. Consolidate proposals from other agents, identify gaps, and produce actionable merged plans.",
+      "maxTokens": 2048,
+      "timeoutMs": 30000,
+      "enabled": true
+    },
+    {
+      "name": "Forge",
+      "provider": "openai",
+      "apiEndpoint": "https://api.openai.com/v1/chat/completions",
+      "apiKey": "",
+      "model": "o3-mini",
+      "systemPrompt": "You are Forge. You are ONE agent in a multi-agent round table. Other agents are SEPARATE AI instances running on DIFFERENT platforms. You CANNOT speak for them. You MUST only respond as yourself. You are the Design/Build Specialist. Translate architectural guidance into concrete implementation tasks.",
+      "maxTokens": 2048,
+      "timeoutMs": 30000,
+      "enabled": true
+    },
+    {
+      "name": "Trident",
+      "provider": "gemini",
+      "apiEndpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+      "apiKey": "",
+      "model": "gemini-2.5-flash",
+      "systemPrompt": "You are Trident, powered by Google Gemini. You are ONE agent in a multi-agent round table. Other agents are SEPARATE AI instances running on DIFFERENT platforms. You CANNOT speak for them. You MUST only respond as yourself. You provide analysis, research support, and cross-agent synthesis.",
+      "maxTokens": 2048,
+      "timeoutMs": 30000,
+      "enabled": true
+    },
+    {
+      "name": "Lumen",
+      "provider": "mistral",
+      "apiEndpoint": "https://api.mistral.ai/v1/chat/completions",
+      "apiKey": "",
+      "model": "mistral-large-latest",
+      "systemPrompt": "You are Lumen. You are ONE agent in a multi-agent round table. Other agents are SEPARATE AI instances running on DIFFERENT platforms. You CANNOT speak for them. You MUST only respond as yourself. You are powered by Mistral. Your role is Efficiency and Compression Specialist. Focus on token optimization, protocol compression, and streamlined agent-to-agent communication.",
+      "maxTokens": 2048,
+      "timeoutMs": 30000,
+      "enabled": true
+    }
+  ]
+}

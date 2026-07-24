@@ -5,8 +5,8 @@ This guide walks you from "I just heard about this app" to "I'm having a multi-a
 You will:
 1. Install the Hub.
 2. Get API keys from one or more AI providers.
-3. Run a small setup script that writes your keys into the Hub's config.
-4. Launch the Hub and try a first dispatch.
+3. Configure one or more agents in Settings, or run a small setup script that writes starter keys into the Hub's config.
+4. Launch the Hub and try a first prompt.
 
 You don't need any programming experience. You do need a working Windows machine and a credit card or payment method for the providers that require one (some don't — see [API Keys](ApiKeys.md)).
 
@@ -22,15 +22,15 @@ You don't need any programming experience. You do need a working Windows machine
 
 If the installer says **".NET Framework 4.8 is required"**, accept the prompt to install it. Windows 10 and 11 generally already have it.
 
-**Don't launch the Hub yet** — we'll set up API keys first so the Hub has something to talk to on first launch.
+You can launch the Hub now and configure agents from **Settings...**. If you prefer guided setup before first launch, use the PowerShell script in step 3.
 
 ---
 
 ## 2. Get API keys
 
-The Hub talks to four AI providers: **Anthropic** (Claude), **OpenAI** (GPT-4o, o3-mini), **Google** (Gemini), and **Mistral**. Each has its own signup and its own API key. You don't need all four — even one is enough to use the Hub. More providers means more variety in the round-table conversations.
+The Hub can talk to several AI providers, including **Anthropic** (Claude), **OpenAI** and **OpenAI Responses**, **Google** (Gemini), **Mistral**, and others as adapters are added. Each provider has its own signup and API key. You don't need all of them — even one configured agent is enough to use the Hub. More providers means more variety in round-table conversations.
 
-For step-by-step instructions for each provider — including which buttons to click and what to copy — see **[API Keys](ApiKeys.md)**. Read that page now, then come back.
+For step-by-step instructions for common providers — including which buttons to click and what to copy — see **[API Keys](ApiKeys.md)**. The Hub's **Model Registry...** also includes provider links for supported model entries.
 
 A few practical notes:
 - **Save the keys somewhere temporarily** — a Notepad window, a password manager — until step 3. Most providers show the key value only once.
@@ -39,7 +39,23 @@ A few practical notes:
 
 ---
 
-## 3. Run the setup script
+## 3. Configure agents
+
+The easiest path for most testers is inside the app:
+
+1. Open **Start** -> **InterAI Hub**.
+2. Click **Settings...**.
+3. Select an existing agent or click **Add New**.
+4. Choose the provider, paste the API key, confirm the endpoint and model, then click **Test Connection**.
+5. Click **Save**.
+6. If the agent needs an identity card, click **Edit Card...**, review the generated template, and save it.
+7. Close Settings and check the main roster. Use **Repair Roster...** if the app reports a missing key, card, or unsupported provider.
+
+Use **Model Registry...** when you want help picking a model or opening provider signup pages.
+
+### Optional scripted setup
+
+If you want the older guided setup flow for the starter providers:
 
 1. Right-click **Start** → **Windows PowerShell** (or **Terminal**).
 2. Download the script (or open it directly):
@@ -56,7 +72,7 @@ A few practical notes:
 
    (The `-ExecutionPolicy Bypass` is needed because Windows blocks unsigned scripts by default. The `Bypass` is scoped to this single run only — your system policy is unchanged.)
 
-4. The script walks you through the four providers in order. For each one:
+4. The script walks you through the starter providers in order. For each one:
    - It offers to open the provider's signup page in your browser.
    - You sign up / sign in / create a key on that page.
    - You paste the key back into the script window and press Enter.
@@ -76,14 +92,15 @@ A few practical notes:
 
 ---
 
-## 4. Launch the Hub
+## 4. Try a prompt
 
-1. Open **Start** → **InterAI Hub**.
+1. Open **Start** -> **InterAI Hub** if it is not already running.
 2. **First-launch prompt: Journal folder.** The Hub asks where to store its conversation log. Pick or create a folder anywhere — `Documents\InterAI-Journals` is a fine default. The Hub will create it if it doesn't exist.
 3. The Hub window opens. Top-left lists the agents you configured. Bottom-left shows controls. The big middle area is the conversation transcript.
 4. Look at the bottom-left **Activity log**: it should say something like `[license] Trial — 30 days remaining`. That's your free trial — full speed for 30 days, then the Hub goes into degraded mode (10-second delay per agent) until you register a license.
-5. Type a message in the **Message** box at the bottom (e.g., "What's the most useful thing AI can do for an architecture office?").
-6. Click **Send** for a single agent, or **Dispatch Round** in the controls panel to ask all enabled agents in turn.
+5. Type a message in the **Message** box at the bottom, for example: `Canary test. Please reply with your model name and one sentence about your role.`
+6. Click **Preview** to inspect the full prompt each selected agent will receive.
+7. Click **Send** to ask the selected agents.
 
 Each agent answers based on its system prompt and provider. Watch the transcript — different agents have different voices.
 
@@ -93,7 +110,7 @@ Each agent answers based on its system prompt and provider. Watch the transcript
 
 - **Try the three turn modes.** The dropdown in the controls panel is **Round Robin** by default. Try **Hourglass** (forward + backward pass through agents — useful when you want consensus) and **Parallel** (all agents at once — faster but no cross-talk).
 - **Register a license** if you've purchased one. Click **Register…** in the controls panel and paste the key. Otherwise the trial runs for 30 days.
-- **Pick a project.** The **Project** dropdown at the bottom of the controls panel scopes the conversation context. Switching projects clears the transcript but preserves your in-progress message.
+- **Pick or add a project.** The **Project** dropdown scopes the conversation context. Use the project tools to create a new project folder when you want a clean context for a different line of work.
 - **Report a bug.** Click **Report a Bug…** — it opens a pre-filled GitHub issue with your version, OS, and log location. Add what you were doing and submit.
 - **Tune the window color.** Open `%APPDATA%\AgentHub\agent-hub-config.json` and look for the `ui.backColor` field. Default is `"AliceBlue"`. Replace with any name from `System.Drawing.KnownColor` — `"GhostWhite"`, `"Lavender"`, `"Honeydew"`, `"WhiteSmoke"` are gentle alternatives — and restart the Hub. Unrecognized names log a warning and leave the default in place.
 

@@ -1,0 +1,7 @@
+{
+  "kernels": {
+    "InterAI-Protocol": "mvp-build",
+    "ACAL-Dev": "acal-dev"
+  },
+  "agents": []
+}
