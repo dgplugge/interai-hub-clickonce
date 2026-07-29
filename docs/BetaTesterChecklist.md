@@ -4,13 +4,14 @@ Use this checklist for the first external tester pass. A useful test takes about
 
 ## Install
 
-1. Download `setup.exe` from the latest beta release:
+1. Download `InterAI-Hub-ClickOnce-1.0.3.2.zip` from the latest beta release:
 
    <https://github.com/dgplugge/interai-hub-clickonce/releases>
 
-2. Run `setup.exe`.
-3. Accept any normal Windows first-run prompts for unsigned beta software.
-4. Launch **InterAI Hub** from the Start menu.
+2. Right-click the ZIP, choose **Extract All...**, and open the extracted folder.
+3. Run `setup.exe` from the extracted folder.
+4. Accept any normal Windows first-run prompts for unsigned beta software.
+5. Launch **InterAI Hub** from the Start menu.
 
 Expected result: the Hub opens, asks for a Journal folder if needed, and shows the main window.
 

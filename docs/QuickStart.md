@@ -15,10 +15,11 @@ You don't need any programming experience. You do need a working Windows machine
 ## 1. Install the Hub
 
 1. Go to the releases page: <https://github.com/dgplugge/interai-hub-clickonce/releases>
-2. Open the latest beta release and download **`setup.exe`**.
-3. Double-click `setup.exe` to run it.
-4. Windows may show a "Windows protected your PC" warning — click **More info**, then **Run anyway**. (This is normal for software not yet seen by Microsoft's filter.)
-5. The installer runs and adds **InterAI Hub** to your Start menu.
+2. Open the latest beta release and download **`InterAI-Hub-ClickOnce-1.0.3.2.zip`**.
+3. Right-click the ZIP, choose **Extract All...**, and open the extracted folder.
+4. Double-click `setup.exe` from the extracted folder to run it.
+5. Windows may show a "Windows protected your PC" warning — click **More info**, then **Run anyway**. (This is normal for software not yet seen by Microsoft's filter.)
+6. The installer runs and adds **InterAI Hub** to your Start menu.
 
 If the installer says **".NET Framework 4.8 is required"**, accept the prompt to install it. Windows 10 and 11 generally already have it.
 

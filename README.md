@@ -12,9 +12,10 @@ across rounds.
 
 ## Install
 
-1. Download **`setup.exe`** from the [latest beta release](https://github.com/dgplugge/interai-hub-clickonce/releases).
-2. Run it. ClickOnce installs the Hub to your user profile and adds a Start menu entry.
-3. Launch **InterAI Hub** from the Start menu.
+1. Download **`InterAI-Hub-ClickOnce-1.0.3.2.zip`** from the [latest beta release](https://github.com/dgplugge/interai-hub-clickonce/releases).
+2. Right-click the ZIP, choose **Extract All...**, and open the extracted folder.
+3. Run **`setup.exe`** from the extracted folder. ClickOnce installs the Hub to your user profile and adds a Start menu entry.
+4. Launch **InterAI Hub** from the Start menu.
 
 Requires **.NET Framework 4.8** (Windows 10 and 11 ship with it; the installer prompts otherwise).
 
